@@ -10,7 +10,7 @@ device:
   # whether to set CUDA deterministic
   cuda_deterministic: True
   # arg to torch.set_num_threads
-  torch_threads: 4
+  torch_threads: 8
 train:
   # number of parallel environments for training data collection
   n_rollout_threads: 10
@@ -31,12 +31,13 @@ train:
   # whether to consider the case of truncation when an episode is done
   use_proper_time_limits: True
   # if set, load models from this directory; otherwise, randomly initialise the models
+  # model_dir: "/home/huy/HARL/examples/results/pettingzoo_mpe/simple_spread_v2-continuous/haddpg/test/seed-00001-2023-12-03-23-20-42/models/"
   model_dir: ~
 eval:
   # whether to use evaluation
   use_eval: True
   # number of parallel environments for evaluation
-  n_eval_rollout_threads: 20
+  n_eval_rollout_threads: 40
   # number of episodes per evaluation
   eval_episodes: 40
 render:
@@ -59,7 +60,7 @@ model:
   critic_lr: 0.001
 algo:
   # discount factor
-  gamma: 0.99
+  gamma: 0.95
   # off-policy buffer size
   buffer_size: 1000000
   # training batch size
