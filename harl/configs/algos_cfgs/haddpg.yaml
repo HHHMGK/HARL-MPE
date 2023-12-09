@@ -10,14 +10,14 @@ device:
   # whether to set CUDA deterministic
   cuda_deterministic: True
   # arg to torch.set_num_threads
-  torch_threads: 8
+  torch_threads: 4
 train:
   # number of parallel environments for training data collection
-  n_rollout_threads: 10
+  n_rollout_threads: 4
   # number of total steps
   num_env_steps: 10000000
   # number of warmup steps
-  warmup_steps: 10000
+  warmup_steps: 1000
   # number of steps per train
   train_interval: 50
   # ratio of training iterations to train_interval
