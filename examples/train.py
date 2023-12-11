@@ -2,9 +2,10 @@
 import argparse
 import json
 from harl.utils.configs_tools import get_defaults_yaml_args, update_args
-
+import time
 
 def main():
+    st = time.time()
     """Main function."""
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
@@ -90,6 +91,7 @@ def main():
     runner.run()
     runner.close()
 
+    print("Total time: ", time.time() - st)
 
 if __name__ == "__main__":
     main()

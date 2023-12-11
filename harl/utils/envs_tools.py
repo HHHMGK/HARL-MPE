@@ -79,6 +79,7 @@ def make_train_env(env_name, seed, n_threads, env_args):
                     "simple_spread_v2",
                     "simple_reference_v2",
                     "simple_speaker_listener_v3",
+                    "simple_world_comm_v2"
                 ], "only cooperative scenarios in MPE are supported"
                 env = PettingZooMPEEnv(env_args)
             elif env_name == "gym":

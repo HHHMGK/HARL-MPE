@@ -1,6 +1,6 @@
 import time
 from pettingzoo.mpe import \
-    simple_world_comm_v3 \
+    simple_world_comm_v2 \
         as main_env
 
 env = main_env.env(max_cycles = 50, continuous_actions = False, render_mode='human')
@@ -19,5 +19,5 @@ for agent in env.agent_iter():
 
     # print(action)
     env.step(action)
-    # time.sleep(1)
+    time.sleep(0.1)
 env.close()

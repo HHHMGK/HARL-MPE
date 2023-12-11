@@ -1,5 +1,10 @@
-scenario: simple_spread_v2
+scenario: simple_world_comm_v2
 continuous_actions: True
-N: 50
+# N: 50
 max_cycles: 25
-local_ratio: 0.2
+# local_ratio: 0.2
+# num_good: 10
+# num_adversaries: 5
+# num_obstacles: 3
+# num_food: 1
+# num_forests: 2

@@ -15,7 +15,7 @@ train:
   # number of parallel environments for training data collection
   n_rollout_threads: 20
   # number of total training steps
-  num_env_steps: 10000000
+  num_env_steps: 1000000
   # number of steps per environment per training data collection
   episode_length: 200
   # logging interval
@@ -29,7 +29,7 @@ train:
   # whether to consider the case of truncation when an episode is done
   use_proper_time_limits: True
   # if set, load models from this directory; otherwise, randomly initialise the models
-  model_dir: ~
+  model_dir: "results/pettingzoo_mpe/simple_world_comm_v2-continuous/hatrpo/test/seed-00001-2023-12-11-10-31-22/models"
 eval:
   # whether to use evaluation
   use_eval: True
@@ -39,7 +39,7 @@ eval:
   eval_episodes: 20
 render:
   # whether to use render
-  use_render: False
+  use_render: True
   # number of episodes to render
   render_episodes: 10
 model:
